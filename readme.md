@@ -13,7 +13,7 @@ A clean and modern **To-Do List application** built using **HTML, CSS, and JavaS
 - Responsive and modern UI
 
 ## 🚀 Live Demo
-https://YOUR-USERNAME.github.io/todo-app/
+https://nitish19work-ctrl.github.io/to-do-list-app/
 
 ## 🛠 Tech Stack
 - HTML
@@ -30,3 +30,4 @@ https://YOUR-USERNAME.github.io/todo-app/
 
 ## 👨‍💻 Author
 Made with ❤️ by Nitish Pal
+
