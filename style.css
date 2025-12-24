@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card */
+.todo-app{
+    width: 100%;
+    max-width: 480px;
+    background: rgba(255,255,255,0.92);
+    padding: 35px 30px 50px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    animation: fadeUp 0.7s ease;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Heading */
+.todo-app h2{
+    font-size: 24px;
+    color: #1f2937;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+/* Input Row */
+.row{
+    display: flex;
+    background: #f3f4f6;
+    border-radius: 30px;
+    padding-left: 18px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 14px;
+    font-size: 15px;
+}
+
+button{
+    border: none;
+    padding: 14px 38px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover{
+    background: #1d4ed8;
+    transform: scale(1.05);
+}
+
+/* Task Item */
+ul li{
+    list-style: none;
+    padding: 14px 8px 14px 46px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.2s;
+}
+
+ul li:hover{
+    background: #f9fafb;
+    border-radius: 10px;
+}
+
+/* Checkbox */
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    border: 2px solid #9ca3af;
+    top: 14px;
+    left: 12px;
+}
+
+/* Checked */
+ul li.checked{
+    color: #6b7280;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background: #2563eb;
+    border-color: #2563eb;
+}
+
+/* Delete */
+ul li span{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
+    line-height: 34px;
+    text-align: center;
+    border-radius: 50%;
+    color: #9ca3af;
+    transition: background 0.2s, color 0.2s;
+}
+
+ul li span:hover{
+    background: #ef4444;
+    color: white;
+}
