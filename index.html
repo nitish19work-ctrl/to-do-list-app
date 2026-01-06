@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced To-Do List App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="todo-app">
+            <h2>
+                To-Do List
+                <img src="images/icon.png" alt="Todo icon">
+            </h2>
+
+            <!-- Input Row -->
+            <form class="row" id="task-form">
+                <input 
+                    type="text" 
+                    id="input-box" 
+                    placeholder="Add your task"
+                    autocomplete="off"
+                >
+                <button type="submit">Add</button>
+            </form>
+
+            <!-- Task List -->
+            <ul id="list-container"></ul>
+
+            <!-- Footer -->
+            <div class="todo-footer">
+                <span id="task-count">0 tasks left</span>
+
+                <div class="filters">
+                    <button data-filter="all" class="active">All</button>
+                    <button data-filter="active">Active</button>
+                    <button data-filter="completed">Completed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Outer container */
+.container{
+    width:100%;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+}
+
+/* Card */
+.todo-app{
+    width:100%;
+    max-width:480px;
+    background:#ffffff;
+    padding:30px 25px 40px;
+    border-radius:18px;
+    box-shadow:0 25px 45px rgba(0,0,0,0.25);
+    animation:fadeUp .6s ease;
+}
+
+@keyframes fadeUp{
+    from{opacity:0;transform:translateY(30px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+/* Heading */
+.todo-app h2{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:24px;
+    color:#1f2937;
+    margin-bottom:25px;
+}
+
+.todo-app h2 img{
+    width:32px;
+}
+
+/* Input row */
+.row{
+    display:flex;
+    align-items:center;
+    background:#f3f4f6;
+    border-radius:30px;
+    padding-left:18px;
+    margin-bottom:25px;
+}
+
+.row input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:transparent;
+    padding:14px;
+    font-size:15px;
+}
+
+.row button{
+    border:none;
+    padding:14px 34px;
+    background:#2563eb;
+    color:white;
+    font-size:15px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.row button:hover{
+    background:#1d4ed8;
+}
+
+/* Task list */
+ul{
+    list-style:none;
+}
+
+ul li{
+    position:relative;
+    padding:14px 40px 14px 46px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.2s;
+    border-radius:10px;
+}
+
+ul li:hover{
+    background:#f9fafb;
+}
+
+/* Checkbox */
+ul li::before{
+    content:"";
+    position:absolute;
+    top:14px;
+    left:12px;
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    border:2px solid #9ca3af;
+}
+
+/* Checked */
+ul li.checked{
+    color:#6b7280;
+    text-decoration:line-through;
+}
+
+ul li.checked::before{
+    background:#2563eb;
+    border-color:#2563eb;
+}
+
+/* Delete button */
+ul li span{
+    position:absolute;
+    right:10px;
+    top:10px;
+    width:32px;
+    height:32px;
+    line-height:32px;
+    text-align:center;
+    font-size:20px;
+    color:#9ca3af;
+    border-radius:50%;
+    transition:.2s;
+}
+
+ul li span:hover{
+    background:#ef4444;
+    color:#fff;
+}
+
+/* Footer */
+.todo-footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+    font-size:14px;
+    color:#374151;
+}
+
+.filters{
+    display:flex;
+    gap:8px;
+}
+
+.filters button{
+    padding:6px 14px;
+    border:none;
+    border-radius:20px;
+    background:#e5e7eb;
+    font-size:13px;
+    cursor:pointer;
+}
+
+.filters button.active{
+    background:#2563eb;
+    color:white;
+}
+
+/* Responsive */
+@media(max-width:480px){
+    .todo-app{
+        padding:25px 20px 35px;
+    }
+
+    .row button{
+        padding:14px 26px;
+    }
+}
